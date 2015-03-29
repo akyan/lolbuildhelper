@@ -1,0 +1,14 @@
+{
+  "name": "lolbuildhelper",
+  "version": "1.0.0",
+  "description": "A simple tool to automatically display a list of possible builds based on what champion you are playing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "James Gawn",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.3"
+  }
+}
