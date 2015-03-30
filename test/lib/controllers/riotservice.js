@@ -3,14 +3,14 @@
  */
 
 var assert = require('assert');
-var riotservice = require('../../../lib/controllers/riotservice');
-
+var RiotService = require('../../../lib/controllers/riotservice');
+var service = new RiotService(require('../../../lib/config').riotApiConfig);
 describe('riotservice', function () {
   it('should return true for valid region euw', function(){
-    assert.equal(riotservice.isValidRegion('euw'), true);
+    assert.equal(service.isValidRegion('EUW'), true);
   })
 
   it('should return false for invalid region abc', function(){
-    assert.equal(riotservice.isValidRegion('abc'), false);
+    assert.equal(service.isValidRegion('abc'), false);
   })
 });
