@@ -4,11 +4,18 @@
 
 var assert = require('assert');
 var RiotService = require('../../../lib/controllers/riotservice');
-var service = new RiotService(require('../../../lib/config').riotApiConfig);
+var config = require('../../../lib/config');
+var service = new RiotService(config.riotApiConfig);
 
 describe('riotservice', function () {
+
+  it('should return valid formated URL for region', function(){
+    var url = service.buildEndpointUrl(config.riotApiConfig.riotServiceMethods['summonerByName'], {region: 'euw', name: 'akyantor'});
+    assert.equal(url, 'https://euw.api.pvp.net/api/lol/euw/v1.4/summoner/by-name/akyantor?api_key='+config.riotApiConfig.devkey);
+  })
+
   it('should return true for valid region euw', function(){
-    assert.equal(service.isValidRegion('EUW'), true);
+    assert.equal(service.isValidRegion('euw'), true);
   })
 
   it('should return false for invalid region abc', function(){
@@ -18,7 +25,7 @@ describe('riotservice', function () {
   it('should return correct summoner details for Akyan when finding by name', function(done) {
     service.findSummonerByName('EUW', 'akyantor', function(result) {
       var summonerId = result.id;
-      assert.equal(summonerId, '38422131', 'Summoner Id should be 38422131');
+      assert.equal(summonerId, '40397382', 'Summoner Id should be 40397382');
       done();
     });
   })

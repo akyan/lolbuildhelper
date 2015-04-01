@@ -9,7 +9,10 @@
   "author": "James Gawn",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.12.3"
+    "async": "^0.9.0",
+    "express": "^4.12.3",
+    "request": "^2.54.0",
+    "sf": "^0.1.7"
   },
   "devDependencies": {
     "mocha": "^2.2.1"

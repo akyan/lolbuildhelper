@@ -2,12 +2,14 @@
  * Created by Akyan on 01/04/2015.
  */
 
+var requestlib = require('request');
+var logger;
+
 function LoggedRequest(logger) {
 
   if (!(this instanceof LoggedRequest)) {
     return new LoggedRequest(logger);
   }
-  this.requestlib = require('request');
   this.logger = logger;
 
 };
@@ -24,7 +26,7 @@ LoggedRequest.prototype.request = function (options, callback) {
   logger.log('Starting call to ' + stripper(options.url));
   var startTime = Date.now();
 
-  this.requestlib(options, function(err, res, json) {
+  requestlib(options, function(err, res, json) {
     var endTime = Date.now();
     var difference = endTime - startTime;
 
