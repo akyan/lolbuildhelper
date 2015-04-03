@@ -5,14 +5,13 @@ body {
 
     font-size: 1.5em;
     font-family: sans-serif;
-
+    color: whitesmoke;
 }
 div#navbar {
     font-size: 16px;
     height: 28px;
     padding-left: 5px;
     padding-top: 12px;
-    color: white;
 }
 div#background {
     border-top: solid #0C2830 1px;
@@ -30,13 +29,86 @@ div#summonerInput {
     height: 300px;
     background: black;
     margin: auto auto;
-    margin-top: 225px;
+    margin-top: 235px;
     padding: 5px;
+}
+div#summonerInput input {
+    text-align: center;
+}
+div#summonerInput div#title {
+    font-size: x-large;
+    font-size: 2em;
+    padding-top: 5px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+div#summonerInput div#input{
+    text-align: center;
+}
+
+div#summonerInput div#input input{
+    text-align: left;
+    font-size: 20px;
+    height: 40px;
+    width: 500px;
+    padding: 5px;
+}
+div#summonerInput div#input input{
+    text-align: left;
+    font-size: 20px;
+    height: 40px;
+    width: 480px;
+    padding: 5px;
+}
+
+div#summonerInput div#input button{
+    font-size: 20px;
+    height: 50px;
+    width: 100px;
+    padding: 5px;
+    margin:0px;
+}
+
+div#summonerInput div#results{
+    text-align: left;
+    font-size: 18px;
+}
+
+div#summonerInput div#results{
+    text-align: left;
+}
+
+div#summonerInput div#results table{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+input {
+    background: black;
+    text-align: left;
+    color: whitesmoke;
     border: solid #0C2830 1px;
+}
+button {
+    background: black;
+    text-align: center;
+    color: whitesmoke;
+    border: solid #0C2830 1px;
+    background: #0B3134;
+    background: #0b3134; /* Old browsers */
+    background: -moz-linear-gradient(top,  #0b3134 0%, #0b3134 50%, #0c2830 52%, #0b3134 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0b3134), color-stop(50%,#0b3134), color-stop(52%,#0c2830), color-stop(100%,#0b3134)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #0b3134 0%,#0b3134 50%,#0c2830 52%,#0b3134 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #0b3134 0%,#0b3134 50%,#0c2830 52%,#0b3134 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #0b3134 0%,#0b3134 50%,#0c2830 52%,#0b3134 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #0b3134 0%,#0b3134 50%,#0c2830 52%,#0b3134 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b3134', endColorstr='#0b3134',GradientType=0 ); /* IE6-9 */
+
+
 }
 div#footer {
     align-content: center;
-    color: white;
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
@@ -45,3 +117,4 @@ div#footer {
     font-size: 12px;
     text-align: center;
 }
+

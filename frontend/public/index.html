@@ -12,11 +12,23 @@
     <div id="background">
         <div id="content">
             <div id="summonerInput">
-                This is a test, do not be alarmed.
-                <ul>
-                    <li>EUW</li>
-                    <li></li>
-                </ul>
+                <div id="title" ng-bind="title"></div>
+                <div id="input" >
+                    <input type="text" placeholder="Enter a summoner currently playing a match" ng-model="summonerSearch">
+                    <button ng-click="search()">Search</button>
+                </div>
+                <div id="results" ng-hide="summoner == null">
+                    <table>
+                        <tr>
+                            <td>Summoner Name</td>
+                            <td>{{summoner.summonerName}}</td>
+                        </tr>
+                        <tr>
+                            <td>Champion</td>
+                            <td>{{summoner.championName}}</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
         <div id="footer">
