@@ -1,4 +1,47 @@
 body {
     margin: 0px;
     padding: 0px;
+    background: black;
+
+    font-size: 1.5em;
+    font-family: sans-serif;
+
+}
+div#navbar {
+    font-size: 16px;
+    height: 28px;
+    padding-left: 5px;
+    padding-top: 12px;
+    color: white;
+}
+div#background {
+    border-top: solid #0C2830 1px;
+    background-image: url('../images/background.jpg');
+    background-position: center top;
+}
+div#content {
+    min-height: 640px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+div#summonerInput {
+    width: 700px;
+    height: 300px;
+    background: black;
+    margin: auto auto;
+    margin-top: 225px;
+    padding: 5px;
+    border: solid #0C2830 1px;
+}
+div#footer {
+    align-content: center;
+    color: white;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    text-align: center;
 }
