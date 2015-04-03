@@ -15,9 +15,15 @@ function LoggedRequest(logger) {
 };
 
 LoggedRequest.prototype.cleanUrlForLogging = function (url) {
-  var i = url.indexOf('?api_key');
-  var cleanstring = url.substr(0,i);
-  return cleanstring;
+  var i = url.indexOf('api_key');
+  if (i!=-1)
+  {
+    return url.substr(0,i-1);
+  }
+  else
+  {
+    return url;
+  }
 };
 
 LoggedRequest.prototype.request = function (options, callback) {

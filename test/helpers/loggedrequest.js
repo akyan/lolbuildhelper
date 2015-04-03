@@ -14,4 +14,11 @@ describe('loggedrequest', function () {
 
     assert.equal(cleanUrl, 'https://euw.api.pvp.net/api/lol/euw/v1.4/summoner/by-name/akyantor');
   })
+
+  it('should remove key from url with multiple parameters', function(){
+
+    var cleanUrl = requestor.cleanUrlForLogging('https://euw.api.pvp.net/api/lol/euw/v1.4/summoner/by-name/akyantor?blah=gasd&api_key=kjh54-h234-jh3-5134fasf-as4532hl');
+
+    assert.equal(cleanUrl, 'https://euw.api.pvp.net/api/lol/euw/v1.4/summoner/by-name/akyantor?blah=gasd');
+  })
 });
