@@ -13,12 +13,22 @@ function checkEnvVariableIsValidOrWarn(name, warning)
 }
 
 checkEnvVariableIsValidOrWarn('RIOT_API_KEY');
+checkEnvVariableIsValidOrWarn('UI_PORT');
+checkEnvVariableIsValidOrWarn('API_PORT');
+
+exports.frontend = {
+    port: process.env.UI_PORT
+}
+
+exports.api = {
+    port: process.env.API_PORT
+}
 
 exports.riotApiConfig = {
     accesskey: process.env.RIOT_API_KEY
 };
 
-var RiotServiceEndpoint = require('./models/RiotServiceEndpoint');
+var RiotServiceEndpoint = require('./lib/models/RiotServiceEndpoint');
 
 exports.riotApiConfig.riotServiceEndpoints = [
     new RiotServiceEndpoint('br','BR1','br.api.pvp.net'),

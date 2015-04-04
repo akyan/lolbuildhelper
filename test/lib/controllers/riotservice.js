@@ -4,7 +4,7 @@
 
 var assert = require('assert');
 var RiotService = require('../../../lib/controllers/riotservice');
-var config = require('../../../lib/config');
+var config = require('../../../config');
 var service = new RiotService(config.riotApiConfig);
 
 describe('riotservice', function () {
