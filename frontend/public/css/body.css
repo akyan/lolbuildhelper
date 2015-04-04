@@ -41,6 +41,7 @@ div#summonerInput div#title {
     padding-top: 5px;
     padding-bottom: 50px;
     text-align: center;
+    min-height: 55px;
 }
 div#summonerInput div#input{
     text-align: center;
@@ -72,10 +73,7 @@ div#summonerInput div#input button{
 div#summonerInput div#results{
     text-align: left;
     font-size: 18px;
-}
-
-div#summonerInput div#results{
-    text-align: left;
+    display: none;
 }
 
 div#summonerInput div#results table{
