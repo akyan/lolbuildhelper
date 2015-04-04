@@ -2,7 +2,7 @@
   "name": "lolbuildhelper",
   "version": "1.0.0",
   "description": "A simple tool to automatically display a list of possible builds based on what champion you are playing.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "npm run test-node",
     "test-node": "mocha --recursive ./test"
