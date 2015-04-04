@@ -29,6 +29,10 @@ module.exports = function(config) {
         res.sendFile(path.join(__dirname, '../node_modules/angular-resource/angular-resource.min.js.map'));
     })
 
+    webApp.use('/css/angular-csp.css', function (req, res, next) {
+        res.sendFile(path.join(__dirname, '../node_modules/angular/angular-csp.css'));
+    })
+
     webApp.listen(config.frontend.port);
 
     logger.log('Started on port ' + config.frontend.port);

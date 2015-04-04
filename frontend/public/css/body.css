@@ -73,7 +73,6 @@ div#summonerInput div#input button{
 div#summonerInput div#results{
     text-align: left;
     font-size: 18px;
-    display: none;
 }
 
 div#summonerInput div#results table{

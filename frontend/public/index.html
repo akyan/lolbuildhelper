@@ -3,6 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/body.css" />
+    <link rel="stylesheet" type="text/css" href="css/angular-csp.css" />
     <title ng-bind="title"></title>
 </head>
 <body >
@@ -14,10 +15,12 @@
             <div id="summonerInput">
                 <div id="title" ng-bind="title"></div>
                 <div id="input" >
-                    <input type="text" placeholder="Enter a summoner currently playing a match" ng-model="summonerSearch">
-                    <button ng-click="search()">Search</button>
+                    <form ng-submit="search()">
+                        <input type="text" placeholder="Enter a summoner currently playing a match" ng-model="summonerSearch">
+                        <button type="submit">Search</button>
+                    </form>
                 </div>
-                <div id="results" ng-hide="summoner == null">
+                <div id="results" ng-hide="summoner == null" ng-cloak>
                     <table>
                         <tr>
                             <td>Summoner Name</td>
