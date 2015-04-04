@@ -23,7 +23,7 @@ describe('riotservice', function () {
 
   it('should return valid formated URL for region', function(){
     var url = service.buildEndpointUrl(config.riotApiConfig.riotServiceMethods['summonerByName'], {region: 'euw', name: 'akyantor'});
-    assert.equal(url, 'https://euw.api.pvp.net/api/lol/euw/v1.4/summoner/by-name/akyantor?api_key='+config.riotApiConfig.devkey);
+    assert.equal(url, 'https://euw.api.pvp.net/api/lol/euw/v1.4/summoner/by-name/akyantor?api_key='+config.riotApiConfig.accesskey);
   })
 
   it('should return true for valid region euw', function(){
